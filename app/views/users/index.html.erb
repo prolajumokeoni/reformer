@@ -1,0 +1,15 @@
+<table>
+    <thead>
+      <th>Username</th>
+      <th>Email</th>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to  user.username, user  %></td>
+          <td><%=  user.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<a href="/users/new">NEW USER</a>
