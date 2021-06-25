@@ -1,17 +1,17 @@
 <div class="row mt-5">
-<table class="table table-striped">
-    <thead>
+<table class="table table">
+    <thead class="table-light">
       <th>Username</th>
       <th>Email</th>
     </thead>
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td><%= link_to  user.username, user  %></td>
+          <td><%= link_to  user.username, user, class: 'text-decoration-none'  %></td>
           <td><%=  user.email %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-<a class="btn text-decoration-none btn-dark mt-5" href="/users/new">NEW USER</a>
+<a class="btn text-decoration-none btn-primary mt-5" href="/users/new">NEW USER</a>
